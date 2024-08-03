@@ -1,3 +1,4 @@
+/* General Styles */
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +6,137 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #1e1e1e;
+  color: #e0e0e0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: radial-gradient(circle, #0a0a0a, #1e1e1e);
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  color: #f76c6c;
+}
+
+.small {
+  font-size: 1.2rem;
+  color: #c0c0c0;
+}
+
+.labels {
+  list-style: none;
+  display: flex;
+  text-transform: uppercase;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #333;
+  border-radius: 1.5rem;
+  margin: 1rem;
+}
+
+.active-label {
+  color: #f76c6c;
+  background-color: #1a1a1a;
+}
+
+.timer-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.time-wrapper {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.time-wrapper .countdown-timer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 15px solid transparent;
+  border-top: 15px solid #f76c6c;
+  animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.time-wrapper .timer-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 3rem;
+  color: #fff;
+}
+
+.button-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+button {
+  color: #fff;
+  font-size: 1rem;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 2rem;
+  margin: 0.5rem;
+  background: #333;
+  min-width: 100px;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+
+button.active {
+  color: #333;
+  background-color: #f76c6c;
+  border: 1px solid #f76c6c;
+}
+
+button:hover {
+  background-color: #444;
+}
+
+/* Form Styles */
+.form-container {
+  text-align: center;
+}
+
+.input-wrapper {
+  margin: 1.5rem;
+}
+
+.input-wrapper input {
+  height: 40px;
+  width: 60px;
+  padding: 0.5rem;
+  background-color: #333;
+  color: #f76c6c;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 16px;
 }
